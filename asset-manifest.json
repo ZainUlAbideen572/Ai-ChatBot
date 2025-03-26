@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/ZainUlAbideen572/Ai-ChatBot/static/js/main.5c9d6e98.js",
-    "index.html": "/ZainUlAbideen572/Ai-ChatBot/index.html",
-    "main.5c9d6e98.js.map": "/ZainUlAbideen572/Ai-ChatBot/static/js/main.5c9d6e98.js.map"
+    "main.js": "/Ai-ChatBot/static/js/main.5c9d6e98.js",
+    "index.html": "/Ai-ChatBot/index.html",
+    "main.5c9d6e98.js.map": "/Ai-ChatBot/static/js/main.5c9d6e98.js.map"
   },
   "entrypoints": [
     "static/js/main.5c9d6e98.js"

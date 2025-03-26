@@ -28,6 +28,7 @@ const ConversationHistory = () => {
     try {
       await navigator.clipboard.writeText(getShareText());
       alert('Copied to clipboard!');
+      setIsModalOpen(false)
     } catch (error) {
       console.error('Failed to copy:', error);
       alert('Failed to copy.');

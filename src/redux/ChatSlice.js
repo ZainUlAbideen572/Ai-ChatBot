@@ -44,5 +44,5 @@ const chatSlice = createSlice({
   })
 
 
-export const { addMessage ,endChat,setMessageFeedback,rateConversation} = chatSlice.actions;
+export const { addMessage ,endChat,setMessageFeedback} = chatSlice.actions;
 export default chatSlice.reducer;

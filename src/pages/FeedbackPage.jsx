@@ -13,7 +13,6 @@ import {
 const FeedbackTable = () => {
   const feedbacksObj = useSelector((state) => state.feedback.feedbacks) || [];
   const feedbacks = Object.values(feedbacksObj).flat();  
-
   return (
     <TableContainer component={Paper}>
       <Table>

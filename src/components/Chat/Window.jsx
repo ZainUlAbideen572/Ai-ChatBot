@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addMessage, endChat, setMessageFeedback } from '../../redux/ChartSlice';
+import { addMessage, endChat, setMessageFeedback } from '../../redux/ChatSlice';
 import { v4 as uuidv4 } from 'uuid';
 import { Button, TextField, List, ListItem, Typography, IconButton } from '@mui/material';
 import { ThumbUp, ThumbDown } from '@mui/icons-material';

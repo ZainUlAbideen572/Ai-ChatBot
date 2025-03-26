@@ -39,18 +39,6 @@ const chatSlice = createSlice({
     
       state.conversations = {};
     },
-    rateConversation: (state, action) => {
-      console.log(action.payload, 'payload');
-      const { chatId, value ,feedback} = action.payload;
-      const { newValue } = value; 
-      console.log(action.payload, 'new');
-    
-      if (state.conversations[chatId]) {
-        state.conversations[chatId].rating = newValue; 
-        state.conversations[chatId].feedback=feedback
-      }
-    }
-    
   }
   
   })

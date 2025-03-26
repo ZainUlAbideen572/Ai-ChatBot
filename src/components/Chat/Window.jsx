@@ -7,6 +7,7 @@ import { Button, TextField, List, ListItem, Typography, IconButton } from '@mui/
 import { ThumbUp, ThumbDown } from '@mui/icons-material';
 import ChatFeedback from './Feedback';
 import { useNavigate } from 'react-router-dom';
+import { aiResponses } from '../../assets/Constants';
 const ChatWindow = () => {
 const navigate=useNavigate()
   const [input, setInput] = useState('');
@@ -20,15 +21,25 @@ const navigate=useNavigate()
     const userMessage = { id: uuidv4(), text: input, sender: 'user' };
     dispatch(addMessage({ id: chatId, message: userMessage }));
 
-    try {
-      const res = await axios.get("http://localhost:4000/api/chat")
-      const randomIndex = Math.floor(Math.random() * res.data.length);
-      const aiMessage = { id: uuidv4(), text: res.data[randomIndex], sender: 'ai' };
-      dispatch(addMessage({ id: chatId, message: aiMessage }))
-      setInput('')
-    } catch (err) {
-      console.log(err)
-    }
+    // comment it if u wanna use backend server
+    const randomIndex = Math.floor(Math.random() * aiResponses.length);
+    const aiMessage = { id: uuidv4(), text: aiResponses[randomIndex], sender: 'ai' };
+    dispatch(addMessage({ id: chatId, message: aiMessage }))
+    setInput('')
+
+    // 
+
+    // This i commented because github pages only servers static files and does not support server side rendering if you want to check  this with backend just uncomment it out
+    // try {
+    //   const res = await axios.get("http://localhost:4000/api/chat")
+
+    //   const randomIndex = Math.floor(Math.random() * res.data.length);
+    //   const aiMessage = { id: uuidv4(), text: res.data[randomIndex], sender: 'ai' };
+    //   dispatch(addMessage({ id: chatId, message: aiMessage }))
+    //   setInput('')
+    // } catch (err) {
+    //   console.log(err)
+    // }
   };
 
   const handleFeedback = (messageId, feedback) => {

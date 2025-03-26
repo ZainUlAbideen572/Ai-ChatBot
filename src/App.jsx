@@ -6,7 +6,7 @@ import FeedbackPage from './pages/FeedbackPage';
 const App = () => {
   return (
     <div className='bg-blue-400'>
-    <Router>
+    <Router basename='/Ai-ChatBot'>
       <Routes>
         <Route path="/" element={<ChatPage />} />
         <Route path="/feedback" element={<FeedbackPage />} />
